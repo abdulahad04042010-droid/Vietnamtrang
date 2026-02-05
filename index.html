@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Gift 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  font-family:'Patrick Hand', cursive;
+  background:#ffd6e5;
+}
+.fall-heart{
+  position:fixed;
+  top:-30px;
+  font-size:22px;
+  animation: fallHeart linear infinite;
+  pointer-events:none;
+}
+@keyframes fallHeart{
+  to{transform:translateY(120vh) rotate(360deg);opacity:0;}
+}
+.page{
+  display:none;
+  width:90%;
+  max-width:420px;
+  margin:auto;
+  text-align:center;
+  animation:fade .6s ease;
+}
+.page.active{display:block}
+@keyframes fade{
+  from{opacity:0;transform:translateX(40px)}
+  to{opacity:1;transform:translateX(0)}
+}
+h2{font-size:26px;color:#000}
+p{font-size:20px;color:#000;line-height:1.7}
+.circle-photo{
+  width:120px;height:120px;border-radius:50%;
+  object-fit:cover;border:3px solid #fff;margin-bottom:15px;
+}
+.teddy{
+  width:100px;
+  margin:0 auto 12px;
+  display:block;
+}
+button{
+  margin:18px 10px 0;
+  padding:10px 26px;
+  border:none;
+  border-radius:30px;
+  background:#ff4f8b;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+.no-btn{position:absolute}
+#result{margin-top:20px;font-size:22px;color:#000}
+.photo-page{
+  background:#fff;
+  min-height:100vh;
+  padding:20px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.frame{
+  background:#fff;
+  border-radius:18px;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+.frame img{
+  width:100%;
+  border-radius:14px;
+}
+.frame p{
+  margin:6px 0 0;
+  font-size:14px;
+  color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="fall-heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=12+Math.random()*8+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),20000);
+},900);
+</script>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <h2>💝 Mở Quà Nào 💝</h2>
+  <p>Một món quà nhỏ dành cho em 🌹</p>
+  <button onclick="next()">Mở 💖</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <img class="circle-photo" src="https://i.ibb.co/tM4jTf0R/IMG-20251208-115254-857.jpg">
+  <p>CHÚC MỪNG NGÀY LỄ TÌNH NHÂN CỦA ANH, EM YÊU 💝</p>
+  <button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Em biết không, khi anh nhìn thấy em lần đầu 🤭, em trông thật xinh đẹp 😍.<br>
+Anh đã yêu em ngay lúc đó 💖.<br><br>
+Anh không biết chuyện gì đã xảy ra với mình,  
+anh bắt đầu thích em..... 🤭🙂
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Có lẽ anh muốn một người bạn gái xinh đẹp như em 🫠...<br>
+Anh không biết mình có đẹp trai hay không 🤡..... Thôi bỏ đi.....
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Em biết không, anh đã nói với em về cảm xúc của anh rồi...... 😉<br><br>
+Anh thật sự rất thích em,  
+và anh yêu em rất nhiều, em bé nhỏ của anh 💞<br><br>
+Anh không biết em có yêu anh hay không,  
+anh chỉ muốn nói cho em biết cảm xúc của anh..... 😿
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Anh chỉ muốn nói với em một điều…  
+Anh cảm thấy ngại, nhưng anh vẫn muốn nói.  
+
+<br><br>
+Em có thể trở thành vợ tương lai của anh không 🤭🤭……
+
+<br><br>
+Anh hứa sẽ luôn làm em hạnh phúc,  
+và bất cứ điều gì em muốn, anh sẽ cho em tất cả trong cuộc đời anh 😊……
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Anh biết anh nói điều này quá sớm,  
+anh cũng không biết tại sao…  
+Có lẽ vì anh yêu em, nên mới như vậy 🥺……
+
+<br><br>
+Anh không muốn mất em,  
+bởi vì em là tất cả đối với anh 🙂……
+
+<br><br>
+Anh thật sự chỉ muốn có mình em thôi……
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<img class="teddy" src="https://i.ibb.co/hJT9GS5L/file-00000000eb2071faaf0cbaccbe3e52fc.png">
+<p>
+Bởi vì em chính là kiểu người anh thích 🤭  
+Anh cũng không biết vì sao 🤪  
+Nhưng anh biết em khác với những cô gái khác…  
+Anh hiểu em……
+
+<br><br>
+Trái tim anh không bao giờ cho phép anh mất em 😭……
+</p>
+<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+</div>
+
+<!-- ASK PAGE -->
+<div class="page">
+  <h2 style="font-size:32px;">ANH MUỐN HỎI EM MỘT ĐIỀU.... 👉</h2>
+  <button onclick="back()">Quay lại</button>
+  <button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PROPOSAL PAGE -->
+<div class="page">
+<h2>EM CÓ ĐỒNG Ý LẤY ANH TRONG TƯƠNG LAI KHÔNG, TRANG 💍</h2>
+<button onclick="yes()">CÓ 💖</button>
+<button class="no-btn" onmouseover="runAway(this)">KHÔNG 😆</button>
+<div id="result"></div>
+<button onclick="back()">Quay lại</button>
+</div>
+
+<script>
+let pages=document.querySelectorAll(".page");
+let i=0;
+function next(){if(i<pages.length-1){pages[i++].classList.remove("active");pages[i].classList.add("active");}}
+function back(){if(i>0){pages[i--].classList.remove("active");pages[i].classList.add("active");}}
+function yes(){
+  document.getElementById("result").innerText="Chúc mừng 🤭🌹";
+}
+function runAway(btn){
+  btn.style.top=Math.random()*200+"px";
+  btn.style.left=Math.random()*200+"px";
+}
+</script>
+
+</body>
+</html>
